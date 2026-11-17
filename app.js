@@ -7,11 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   // 0. PROFILE PHOTO HANDLER & PERSISTENCE
   // ------------------------------------------------------------------------
-<<<<<<< HEAD
   const profilePhotoUploads = document.querySelectorAll('.profile-photo-upload-input');
-=======
-  const profilePhotoUpload = document.getElementById('profile-photo-upload');
->>>>>>> 201d6160fcd28938c999bacbb64d964f30c55cb8
   const syncProfilePhotos = document.querySelectorAll('.sync-profile-photo');
 
   // Load custom photo if saved in localStorage
@@ -26,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // LocalStorage read error guard
   }
 
-<<<<<<< HEAD
   profilePhotoUploads.forEach(input => {
     input.addEventListener('change', (e) => {
       const file = e.target.files?.[0];
@@ -53,32 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(file);
       }
     });
-=======
-  profilePhotoUpload?.addEventListener('change', (e) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      if (!file.type.startsWith('image/')) {
-        showToast('Please select a valid image file (JPG, PNG, WebP).');
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const base64Data = event.target?.result;
-        if (base64Data) {
-          syncProfilePhotos.forEach(img => {
-            img.src = base64Data;
-          });
-          try {
-            localStorage.setItem('jaggu-profile-photo', base64Data);
-          } catch (storageErr) {
-            console.warn('Image size too large for localStorage, displayed for session.');
-          }
-          showToast('Profile photo updated successfully!');
-        }
-      };
-      reader.readAsDataURL(file);
-    }
->>>>>>> 201d6160fcd28938c999bacbb64d964f30c55cb8
   });
 
   // ------------------------------------------------------------------------
