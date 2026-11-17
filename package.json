@@ -1,0 +1,20 @@
+{
+  "name": "jagadish-kulal-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal developer portfolio website for Jagadish kulal (Jaggu) - MCA student at Poornaprajna Institute of Management (PIM), Udupi",
+  "author": "Jagadish kulal (jagadishkulal225@gmail.com)",
+  "license": "MIT",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "mca",
+    "pim-udupi",
+    "jaggu",
+    "jagadish-kulal"
+  ]
+}
