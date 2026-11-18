@@ -471,29 +471,6 @@ code, kbd, samp, pre {
   background-color: var(--code-bg);
 }
 
-.hero-profile-showcase .photo-upload-badge {
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 36px;
-  height: 36px;
-  background-color: var(--orange-500);
-  color: #ffffff;
-  border-radius: 50%;
-  border: 2px solid var(--bg-card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  transition: all 0.2s ease;
-}
-
-.hero-profile-showcase .photo-upload-badge:hover {
-  background-color: var(--orange-600);
-  transform: scale(1.1);
-}
-
 .profile-showcase-caption {
   display: flex;
   flex-direction: column;
@@ -719,29 +696,6 @@ code, kbd, samp, pre {
   object-fit: cover;
   display: block;
   background-color: var(--code-bg);
-}
-
-.photo-upload-badge {
-  position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 32px;
-  height: 32px;
-  background-color: var(--orange-500);
-  color: #ffffff;
-  border-radius: 50%;
-  border: 2px solid var(--bg-card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-  transition: all 0.2s ease;
-}
-
-.photo-upload-badge:hover {
-  background-color: var(--orange-600);
-  transform: scale(1.1);
 }
 
 .profile-info {
@@ -1052,8 +1006,18 @@ code, kbd, samp, pre {
 }
 
 @media (max-width: 900px) {
-  core-languages-grid {
+  .core-languages-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .lang-card {
+    padding: 1.35rem 1.25rem;
+  }
+
+  .lang-name {
+    font-size: 1.2rem;
   }
 }
 
